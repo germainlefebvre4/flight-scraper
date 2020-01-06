@@ -8,7 +8,7 @@
 * **Where to file issues:**
    https://github.com/germainlefebvre4/flight-scraper/issues
 * **Maintained by:**
-   Germain LEFEBVRE
+   [Germain LEFEBVRE](https://github.com/germainlefebvre4)
 * **Supported architectures: (more info)**
    amd64
 * **Published image artifact details:**
