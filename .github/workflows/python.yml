@@ -3,6 +3,7 @@ on:
   push:
     branches:
     - master
+    - chore/github-actions
 jobs:
   build:
     runs-on: ubuntu-latest

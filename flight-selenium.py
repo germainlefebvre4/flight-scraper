@@ -62,7 +62,7 @@ def main():
     logging.info("Scraper: {} result(s) found".format(len(prices)))
     for price in prices:
         if price.text != '':
-            print(price.text.split(' ')[0])
+            print(price.text.split(' ')[0].replace("\u20ac", ""))
             logging.info("Scraper: Price={}".format(price))
     logging.debug("Scraper: Ended scraping")
 
