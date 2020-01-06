@@ -1,0 +1,21 @@
+name: Docker Image CI
+on:
+  push:
+    branches:
+    - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag germainlefebvre4/flight-scraper:latest
+    - name: Test run container - Run python script
+      run: docker run --rm germainlefebvre4/flight-scraper:latest
+    - name: Publish to Docker Repository
+      uses: elgohr/Publish-Docker-Github-Action@master
+      with:
+        name: germainlefebvre4/flight-scraper:latest
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_PASSWORD }}
+
