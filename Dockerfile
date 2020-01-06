@@ -7,8 +7,7 @@ ENV CHROMEDRIVER_URL = 'https://chromedriver.storage.googleapis.com/79.0.3945.36
 
 WORKDIR /tmp
 RUN apk update && \
-    apk add wget unzip py-pip && \
-    apk cache clean
+    apk add wget unzip py-pip
 RUN wget ${CHROMEDRIVER_URL} && \
     unzip chromedriver_linux64.zip -d /usr/src/app && \
     rm -f chromedriver_linux64.zip
